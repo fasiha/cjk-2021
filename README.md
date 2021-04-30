@@ -121,11 +121,11 @@ Today:
 
 ---
 
-🖌🖌
+🖌🖌🖌
 
 New characters for words whose representation hadn’t been decided could be invented in any number of ways.
 
-👩‍🎨👨‍🎨
+👩‍🎨👩‍🎨👨‍🎨
 
 ---
 
