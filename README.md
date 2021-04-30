@@ -121,11 +121,9 @@ Today:
 
 ---
 
-🖌🖌🖌
-
 New characters for words whose representation hadn’t been decided could be invented in any number of ways.
 
-👩‍🎨👩‍🎨👨‍🎨
+👩‍🎨🖌
 
 ---
 
@@ -328,17 +326,15 @@ But Japan was a cultural vassal of China for much of the last 1500 years, like a
 
 <img src="https://fasiha.github.io/cjk-2021/kirin.jpg">
 
-麒麟 (19+24 blistering strokes)
+麒麟 = “qí lín” vs “ki rin” — “🦒”
+
+漢字 = “hàn zì” vs“kan ji” — “Chinese character”
+
+天使 = “tiān shǐ” vs “ten shi” — 👼
 
 Notes:
 
 Image: [MIKI Yoshihito](https://www.flickr.com/photos/mujitra/2392215954/)
-
-麒麟 = “qí lín” (modern Mandarin), “ki rin” (Japanese). Today means “giraffe 🦒”
-
-漢字 = “hàn zì” (modern Mandarin), “kan ji” (Japanese). Meaning “Chinese character”
-
-天使 = “tiān shǐ” (modern Mandarin), “ten shi” (Japanese). Meaning “heaven’s messenger” (angel)
 
 As characters were imported from China over the Tang and Song and later dynasties, some were used to write native Japanese words, but many represented totally new concepts lacking native equivalents (e.g., Buddhist terms), and Japanese scholars pronounced these the same as the Middle Chinese.
 
