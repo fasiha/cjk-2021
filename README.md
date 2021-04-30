@@ -474,6 +474,10 @@ Examples
   - “yuē shù” in modern Mandarin
   - “yok suk” in Hakka (means “promise”)
 
+Notes:
+
+Today, Chinese characters are not necessary to read or write Korean. High schoolers only learn Chinese characters in elective courses, and newspapers of record might have ~5% Chinese characters.
+
 ---
 
 ### Hangul
@@ -522,10 +526,6 @@ This can happen because Korean morphemes (the smallest unit of meaning) are inva
 These snap together like Legos, following straightforward rules depending on the length of the morpheme.
 
 Hangul did not replace Chinese characters (hanja), then or now. Hangul only became official due to nationalism in the late 1800s. 
-
-Today, even high schoolers only learn Chinese characters in elective courses.
-
-Newspapers of record tend to have ~5% Chinese characters, with political news often having (much) more.
 
 Korean tends to be written with spaces so front-end NLP is easier than Chinese or Japanese.
 
