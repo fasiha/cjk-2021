@@ -292,7 +292,7 @@ Faster typing but it’s a skill that needs practice
 
 #### Handwriting recognition
 
-<video controls><source src="https://fasiha.github.io/cjk-2021/chinese-ios.mp4" type="video/mp4"></video>
+<video controls><source src="https://fasiha.github.io/cjk-2021/handwriting.mp4" type="video/mp4"></video>
 
 Notes:
 
