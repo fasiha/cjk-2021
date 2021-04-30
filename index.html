@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Chinese 中 Japanese 日 Korean 韓 (CJK) text processing and languages</title>
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="perfectmotherfuckingwebsite.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Chinese 中 Japanese 日 Korean 韓 (CJK) text processing and languages</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#chinese-中-japanese-日-korean-韓-cjk-text-processing-and-languages">Chinese 中 Japanese 日 Korean 韓 (CJK) text processing and languages</a><ul>
+<li><a href="#what-id-like-to-talk-about">What I’d like to talk about</a></li>
+<li><a href="#cjk-">“CJK”? 😒</a></li>
+<li><a href="#linguistics-note">Linguistics note</a></li>
+<li><a href="#chinese-writing-漢語">Chinese writing 漢語</a><ul>
+<li><a href="#pictographs">Pictographs</a></li>
+<li><a href="#encoding-thousands-of-characters">Encoding thousands of characters</a></li>
+<li><a href="#how-are-these-input">How are these input?</a></li>
+</ul></li>
+<li><a href="#japanese-日本語">Japanese 日本語</a><ul>
+<li><a href="#chinese-characters-kanji">Chinese characters (kanji)</a></li>
+<li><a href="#japanese-syllabaries">Japanese syllabaries</a></li>
+<li><a href="#flick-input">Flick input</a></li>
+<li><a href="#natural-language-processing">Natural language processing</a></li>
+</ul></li>
+<li><a href="#korean-朝鮮語">Korean 朝鮮語</a><ul>
+<li><a href="#chinese-characters-hanja">Chinese characters (hanja)</a></li>
+<li><a href="#hangul">Hangul</a></li>
+</ul></li>
+<li><a href="#ℐ𝗖𝕆𝖉𝙴">Ⓤ🅽ℐ𝗖𝕆𝖉𝙴</a><ul>
+<li><a href="#the-hangul-trainwreck">The hangul trainwreck</a></li>
+<li><a href="#han-unification">“Han Unification”</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="chinese-中-japanese-日-korean-韓-cjk-text-processing-and-languages">Chinese 中 Japanese 日 Korean 韓 (CJK) text processing and languages</h1>
+<p>Notes:</p>
+<h2 id="what-id-like-to-talk-about">What I’d like to talk about</h2>
+<p>Some factoids about the Chinese, Japanese, and Korean languages and their digital textual representations</p>
+<p>Hopefully interesting but also useful to the practicing programmer</p>
+<blockquote>
+<p>(I’m not a fluent speaker or reader in any of these languages. <code>TODO</code> get reviewers.)</p>
+</blockquote>
+<hr />
+<h2 id="cjk-">“CJK”? 😒</h2>
+<p>Why lump these three extremely different languages into one abbreviation? Seems problematic?</p>
+<hr />
+<p>👋 <strong>Handwavium</strong> 👋 This <a href="https://www.oreilly.com/library/view/cjkv-information-processing/9780596156114/">900-page door stopper</a> by Ken Lunde</p>
+<p><img src="https://fasiha.github.io/cjk-2021/cjkv-cover.png" alt="Lunde, CJKV Information Procesing cover" /></p>
+<p>Notes:</p>
+<p>Chinese, Japanese, and Korean (and here Vietnamese) get lumped together because, to varying degrees, they all make use of <em>Chinese characters</em>, which have traditionally been very interesting from a digital representation perspective</p>
+<p>This is compounded by the fact that all these also use <em>other</em> scripts with their own quirks, so there are many considerations for correct and readable textual representation</p>
+<blockquote>
+<p>Another interesting commonality: their scripts (Chinese characters <em>and</em> others) are readily monospaced.</p>
+</blockquote>
+<hr />
+<h2 id="linguistics-note">Linguistics note</h2>
+<p><img src="https://fasiha.github.io/cjk-2021/lynnguist.jpg" alt="Dr @lynnguist" /></p>
+<p>Notes:</p>
+<p>To linguists, languages are <em>spoken</em></p>
+<p>Their written representations are a very ancillary concern</p>
+<hr />
+<h2 id="chinese-writing-漢語">Chinese writing 漢語</h2>
+<p><img src="https://fasiha.github.io/cjk-2021/The_Calligraphy_Model_Sunny_after_Snow_by_Wang_Xizhi-clip.jpg"></p>
+<p>Notes:</p>
+<blockquote>
+<p>(<a href="https://commons.wikimedia.org/wiki/File:The_Calligraphy_Model_Sunny_after_Snow_by_Wang_Xizhi.jpg">Image</a> is an excerpt from <a href="https://en.wikipedia.org/wiki/Wang_Xizhi">Wang Xizhi</a> (303–361 CE), “Sunny after Snow” calligraphy model on paper, most likley a Tang (618~907 CE) copy)</p>
+</blockquote>
+<p>It’s well-known that “Chinese”, as any kind of unified spoken language, is a politically-backed mirage: Mandarin, Shanghaiese, Cantonese, Fujianese, etc., are mutually unintelligible and vary considerably “in grammar, syntax, phonology, vocabulary, etc.” (<a href="https://languagelog.ldc.upenn.edu/nll/?p=4628">Language Log</a>)</p>
+<blockquote>
+<p>(This mirage may harden into reality as the winner-take-all dynamics of lingua francas, helped along by the People’s Republic of China’s active efforts, slowly kills some of these non-Mandarin languages)</p>
+</blockquote>
+<p>However! Speakers of these languages will use Chinese characters to <em>write</em>, so please let me keep the title of this section “Chinese writing”</p>
+<hr />
+<h3 id="pictographs">Pictographs</h3>
+<p><img src="https://fasiha.github.io/cjk-2021/bone__FS-7864_17.jpg"></p>
+<p>Notes:</p>
+<p>Image: bone fragment, 1300-1050 BCE. <a href="https://asia.si.edu/object/S2012.9.461/">Sackler Gallery, Smithsonian</a></p>
+<p>Like every writing system invented (until the Phonecians invented an abjad, which led to alphabets and syllabaries), the ancient Chinese carved pictograms on bone or turtle shells to represent things.</p>
+<p>The earliest of these representations come from oracle bones found dating from the Shang dynasty. They were inscribed on ox bones or turtle plastrons (undershell), which were then heated till they cracked, or stabbed with a hot poker—the cracks were inspected for divination. Thousands of characters have been found on these bones and shells, indicating a long incubation period that is alas as of now invisible in the archaeological record.</p>
+<hr />
+<p><img src="https://fasiha.github.io/cjk-2021/carapace__FS-7668_24.jpg"></p>
+<p>Notes:</p>
+<p>Image: turtle carapace, 1300-1050 BCE. <a href="https://asia.si.edu/object/S2012.9.445/">Sackler Gallery, Smithsonian</a></p>
+<hr />
+<p>Imagine the sun 🌞</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>1500 BCE (bone)</td>
+<td><img src="https://fasiha.github.io/cjk-2021/日-oracle.svg" width="50em"></td>
+</tr>
+<tr class="even">
+<td>800 BCE (bronze)</td>
+<td><img src="https://fasiha.github.io/cjk-2021/日-bronze.svg" width="50em"></td>
+</tr>
+<tr class="odd">
+<td>300 BCE (bamboo)</td>
+<td><img src="https://fasiha.github.io/cjk-2021/日-silk.svg" width="50em"></td>
+</tr>
+<tr class="even">
+<td>200 BCE</td>
+<td><img src="https://fasiha.github.io/cjk-2021/日-seal.svg" width="50em"></td>
+</tr>
+<tr class="odd">
+<td>Today</td>
+<td>日</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="or-an-eye">Or an eye</h4>
+<p><img src="https://fasiha.github.io/cjk-2021/目-oracle.svg" width="50em"></p>
+<p><img src="https://fasiha.github.io/cjk-2021/目-bronze.svg" width="50em"></p>
+<p><img src="https://fasiha.github.io/cjk-2021/目-slip.svg" width="50em"></p>
+<p><img src="https://fasiha.github.io/cjk-2021/目-seal.svg" width="50em"></p>
+<p>Today:</p>
+<p>目</p>
+<p>(A box with <em>two</em> lines, or 👁 👀)</p>
+<hr />
+<p>🖌🖌</p>
+<p>New characters for words whose representation hadn’t been decided could be invented in any number of ways.</p>
+<p>👩‍🎨👨‍🎨</p>
+<hr />
+<h4 id="reuse">Reuse</h4>
+<p>昌: two suns: sunlight, prosperous, beautiful, …</p>
+<p>林: two trees (木): woods</p>
+<p>森: <em>three</em> trees: (guess!)</p>
+<p>姦: three women (女): today solely negative dictionary definitions (really, ancient misogynistic men writers, really? 🤦)</p>
+<hr />
+<h4 id="combine">Combine</h4>
+<p>Combine meanings</p>
+<ul>
+<li>日 (sun) +</li>
+<li>月 (moon) =</li>
+<li>明 (bright)</li>
+</ul>
+<p>・・・・</p>
+<p>Combine sound:</p>
+<ul>
+<li>早 (zǎo, early) +</li>
+<li>艹 (vegetation) =</li>
+<li>草 (cǎo, grass)</li>
+</ul>
+<p>Notes:</p>
+<p>Writing with a brush (which even the Shang people did, on bamboo, etc.) can lend itself to creativity in constructing new pictographs.</p>
+<p>Although today spoken Mandarin only has around 450 syllables (many of which exist in multiple tones), Old Chinese had considerably less homophony. But this was another source for innovation in characters.</p>
+<hr />
+<h3 id="encoding-thousands-of-characters">Encoding thousands of characters</h3>
+<p><img src="https://fasiha.github.io/cjk-2021/joyo-poster.jpg" width="500em" alt="2136 characters tested in Japanese schools"></p>
+<p>Notes:</p>
+<p>This leads to the classic data representation problem: literally thousands of characters for daily use—</p>
+<ul>
+<li>~2500 taught in elementary school and ~1000 taught in middle school in PRC (<a href="https://en.wikipedia.org/wiki/List_of_Commonly_Used_Characters_in_Modern_Chinese">Wikipedia</a>)</li>
+<li>2663 tested by HSK level 6 (<a href="https://en.wikipedia.org/wiki/Hanyu_Shuiping_Kaoshi#Written_test">Wikipedia</a>)), maybe up to a hundred thousand characters for all historic texts.</li>
+</ul>
+<blockquote>
+<p>We’ll get to it soon but to acknowledge the elephant in the room: Unicode has made things much better but it made things much worse at first, and it had to come from somewhere!</p>
+</blockquote>
+<p><strong>GB2312</strong>, introduced in 1980, was a list of 6,763 Chinese characters plus alphabets/syllabaries for Greek, Russian, and Japanese.</p>
+<p>It uses one or two bytes for each character. Like UTF-8, it is ASCII-compatible: if a byte is between 0x00 and 0x80, then it must be ASCII. If a byte was greater than 0x80, it was a part of a 2-byte character; unlike UTF-8, you don’t know whether it was the first byte or the second byte.</p>
+<p>In practice, GB 2312 used 0xA0 to 0xFF: <code>(255 - 160)**2</code> = 9025. With some private use area (PUA), you get the ≈7000 characters.</p>
+<p>Derived from the Chinese <em>telegraph</em> code, whose “codebook … shows one-to-one correspondence between Chinese characters and four-digit numbers from 0000 to 9999. Chinese characters are arranged and numbered in dictionary order according to their radicals and strokes [counts]. Each page of the book shows 100 pairs of a Chinese character and a number in a 10×10 table. The most significant two digits of a code matches the page number, the next digit matches the row number, and the least significant digit matches the column number.” (<a href="https://en.wikipedia.org/wiki/Chinese_telegraph_code">Wikipedia</a>)</p>
+<hr />
+<h3 id="how-are-these-input">How are these input?</h3>
+<video controls>
+<source src="https://fasiha.github.io/cjk-2021/toshiba.mp4" type="video/mp4">
+</video>
+<p>Notes:</p>
+<p>Toshiba typewriter, produced 1940–1954. 1172 total characters (<a href="https://www.youtube.com/watch?v=JZcui85b4EE">YouTube</a>; <a href="http://www.typewritermuseum.org/collection/brands/index.php3?machine=toshiba&amp;cat=il">Virtual Typewriter Museum</a>)</p>
+<hr />
+<h4 id="use-phoneticsime">Use phonetics—IME</h4>
+<p>Bopomofo is an alphabet for Mandarin and related dialects (as in, real dialects), encoding consonants and vowels and tones, developed in the early 1910s during the Republic of China years. Popular in Taiwan.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Bopomofo.jpg"></p>
+<p>Note: Image: Taiwanese cell phone <a href="https://commons.wikimedia.org/wiki/File:Bopomofo.jpg">Source</a></p>
+<hr />
+<table>
+<tbody>
+<tr class="odd">
+<td>bㄅ</td>
+<td>pㄆ</td>
+<td>mㄇ</td>
+<td>fㄈ</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>dㄉ</td>
+<td>tㄊ</td>
+<td>nㄋ</td>
+<td>lㄌ</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>gㄍ</td>
+<td>kㄎ</td>
+<td>hㄏ</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>jㄐ</td>
+<td>qㄑ</td>
+<td>tㄒ</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>zhㄓ</td>
+<td>chㄔ</td>
+<td>shㄕ</td>
+<td>rㄖ</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>zㄗ</td>
+<td>cㄘ</td>
+<td>sㄙ</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>aㄚ</td>
+<td>oㄛ</td>
+<td>eㄜ</td>
+<td>ehㄝ</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>aiㄞ</td>
+<td>eiㄟ</td>
+<td>auㄠ</td>
+<td>ouㄡ</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>anㄢ</td>
+<td>enㄣ</td>
+<td>angㄤ</td>
+<td>engㄥ</td>
+<td>erㄦ</td>
+</tr>
+<tr class="even">
+<td>iㄧ</td>
+<td>uㄨ</td>
+<td>iuㄩ</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Symbols are chunks of “normal” Chinese characters:</p>
+<p><code>b</code> ➜ ㄅ, from 勹, which in 包 is pronounced “bāo” (🥟)</p>
+<p><code>p</code> ➜ ㄆ, from 攵, which in 攴 is pronounced “pū” (“to tap”)</p>
+<p><code>m</code> ➜ ㄇ, which is 冖, pronounced “mì”, the cover radical</p>
+<p><code>f</code> ➜ ㄈ, which is 匚, pronounced “fāng”, the right open box radical</p>
+<hr />
+<p>Pinyin is also an alphabet for Mandarin, encoding consonants and vowels and tones, but developed in the 1950s by the People’s Republic of China, and so had to use entirely different characters: Latin letters.</p>
+<p>Easy for English speakers to learn!</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Q</td>
+<td>“ch” (like Qin dynasty)</td>
+</tr>
+<tr class="even">
+<td>C</td>
+<td>“ts” (like Tsai Ing-Wen)</td>
+</tr>
+<tr class="odd">
+<td>X</td>
+<td>“sh 😊” (like Xinjiang)</td>
+</tr>
+<tr class="even">
+<td>Sh</td>
+<td>“sh ☹️” (like Shanghai)</td>
+</tr>
+<tr class="odd">
+<td>Zh</td>
+<td>“j 😊” (like Guangzhou)</td>
+</tr>
+<tr class="even">
+<td>J</td>
+<td>“j ☹️”</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<video controls>
+<source src="https://fasiha.github.io/cjk-2021/chinese-ios.mp4" type="video/mp4">
+</video>
+<p>Notes:</p>
+<p>Video: <a href="https://www.youtube.com/watch?v=AU3zaoj5_e4">Fluent in Mandarin</a></p>
+<p>Due to the high amount of homophony in Mandarin, IME tends to be slower than using non-phonetic input. You type in a string of sounds and usually your smartphone gets the characters right (sentence context, usage history, global patterns), but if not you have to select which character you meant.</p>
+<p>This has been a major problem with React and other browser frameworks that want to own text input fields.</p>
+<ul>
+<li><a href="https://github.com/facebook/react/issues/3926">#3926</a> complains, “any Chinese characters inputted by Chinese pinyin input method would fire too many renders”. FB dev responds, “this is not a high priority for us right now” (2015, right around when React 0.14.0 was released; still open).</li>
+<li>“some software keyboards on mobile devices also fire composition events for <strong>autocomplete suggestions</strong>. Note that this is even with <em>normal English input</em> (latin characters), so the general problem isn’t necessarily restricted to just Chinese Japanese etc IME composition.” (Emphasis in original, <a href="https://github.com/facebook/react/issues/8683#issuecomment-359769270">2018</a>, closed and merged with #3926 by Dan Abramov)</li>
+</ul>
+<hr />
+<h4 id="use-writing-for-input">Use “writing” for input</h4>
+<p><img src="https://fasiha.github.io/cjk-2021/radicals.png"></p>
+<p>Notes:</p>
+<p>If you’re familiar with <em>writing</em> a character (something increasingly rare after leaving school), you can specify its <em>component pieces</em> for rapid lookup of a character.</p>
+<p>Image: Lunde, <em>CJKV Information Processing</em>.</p>
+<hr />
+<p><img src="https://fasiha.github.io/cjk-2021/Wubi_keyboard-cut.jpg" height="300px"></p>
+<p>Notes:</p>
+<p>Image: a Wubi keyboard. <a href="https://commons.wikimedia.org/wiki/File:Wubi_keyboard-cut.png">Source</a></p>
+<p>There’s only so many of these components, and Each key on a QWERTY keyboard maps to a certain set of character components (often themselves characters).</p>
+<p>You type the components in the same order that you write them (stroke order being fixed, and heavily drilled in school)</p>
+<p>You’re not limited by homophony: almost all characters have a unique representation with four or fewer keystrokes</p>
+<p>Faster typing but it’s a skill that needs practice</p>
+<hr />
+<h4 id="handwriting-recognition">Handwriting recognition</h4>
+<video controls>
+<source src="https://fasiha.github.io/cjk-2021/chinese-ios.mp4" type="video/mp4">
+</video>
+<p>Notes:</p>
+<p>Video: <a href="https://www.youtube.com/watch?v=AU3zaoj5_e4">Fluent in Mandarin</a> again</p>
+<p>Introduced mid-2008 with iOS 2.0 (recall copy-paste was added iOS 3.0, mid-2009).</p>
+<p>Rather than develop phonetic pinyin-to-characters libraries for the many languages of the Sinosphere—Cantonese, Shanghaiese, Fujianese, Hakka, etc.—handwriting recognition allows all these speakers to readily enter text.</p>
+<p>Most recently: speech-to-text.</p>
+<blockquote>
+<p>Simplified vs traditional?—hold on to that question, it’s wierder than you think</p>
+</blockquote>
+<hr />
+<h2 id="japanese-日本語">Japanese 日本語</h2>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Koku_Saitcho_shounin.jpg"></p>
+<p>Notes:</p>
+<p>Image: <em>Cry for the Noble Saichō</em> by Emperor Saga on the death of Saichō, circa 822 CE. Saichō and a fellow Buddhist monk Kūkai are said to have introduced tea to Japan from China. <a href="https://en.wikipedia.org/wiki/File:Koku_Saitcho_shounin.jpg">Source</a></p>
+<h3 id="chinese-characters-kanji">Chinese characters (kanji)</h3>
+<p>Japanese as a spoken language is totally unrelated to Chinese!</p>
+<p>But Japan was a cultural vassal of China for much of the last 1500 years, like all nations that orbited the Middle Kingdom (“middle” as in, middle of the world), so it adopted (and adapted!) <em>both</em> Chinese characters <em>and</em> those characters’ Chinese pronunciation.</p>
+<hr />
+<p><img src="https://fasiha.github.io/cjk-2021/kirin.jpg"></p>
+<p>麒麟 (19+24 blistering strokes)</p>
+<p>Notes:</p>
+<p>Image: <a href="https://www.flickr.com/photos/mujitra/2392215954/">MIKI Yoshihito</a></p>
+<p>麒麟 = “qí lín” (modern Mandarin), “ki rin” (Japanese). Today means “giraffe 🦒”</p>
+<p>漢字 = “hàn zì” (modern Mandarin), “kan ji” (Japanese). Meaning “Chinese character”</p>
+<p>天使 = “tiān shǐ” (modern Mandarin), “ten shi” (Japanese). Meaning “heaven’s messenger” (angel)</p>
+<p>As characters were imported from China over the Tang and Song and later dynasties, some were used to write native Japanese words, but many represented totally new concepts lacking native equivalents (e.g., Buddhist terms), and Japanese scholars pronounced these the same as the Middle Chinese.</p>
+<p>Over the last thousand years, Chinese loanwords have been thoroughly Japanified: the majority of Chinese characters have both a Chinese-derived pronunciation and a Japanese-native pronunciation.</p>
+<p>A gentle analogy may be—English often has a more learned French/Latin-derived term for something and a down-to-earth Norse-derived equivalent: inquire/ask, commence/begin, purchase/buy (<a href="https://en.wikipedia.org/wiki/List_of_Germanic_and_Latinate_equivalents_in_English">Wikipedia</a> has a ton of these!).</p>
+<p>Students begin learning to write Chinese characters in first grade, and by the time they finish high school, they are tested on mastery of 2,136 characters’ readings. These are an integral part of Japanese writing but not the whole story.</p>
+<hr />
+<p><img src="https://fasiha.github.io/cjk-2021/Murasaki_Shikibu_Komatsuken.jpg"></p>
+<p>Notes:</p>
+<p>Image: Murasaki Shikibu finished <em>The Tale of Genji</em> circa 1012 CE. Though very popular, the earliest extant manuscript is from more than 200 years later. It is likely to have been written in both kanji and hiragana. Woodblock print by Komatsuken in 1765. <a href="https://collections.mfa.org/objects/233977">Source</a></p>
+<h3 id="japanese-syllabaries">Japanese syllabaries</h3>
+<p>Over a thousand years ago, Japanese men and women developed their own syllabaries, like bopomofo, that encode the sounds of spoken Japanese with simplified Chinese characters.</p>
+<p>Heian court ladies developed hiragana: ひらがな (“hiragana” in hiragana; in katakana: ヒラガナ). More rounded and smooth, even when written with a brush.</p>
+<p>Buddhist monks developed katakana: カタカナ (“katakana” in katakana; in hiragana: かたかな): sharp and angular.</p>
+<p>Each has 46 symbols (encoding the 5×10 combinations of 5 vowels and 10 basic consonants, less some obsolete pairings), and are fully interchangeable.</p>
+<hr />
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>ａｉｕｅｏ</th>
+<th>ａｉｕｅｏ</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>∅</td>
+<td>あいうえお</td>
+<td>アイウエオ</td>
+</tr>
+<tr class="even">
+<td>k</td>
+<td>かきくけこ</td>
+<td>カキクケコ</td>
+</tr>
+<tr class="odd">
+<td>s</td>
+<td>さしすせそ</td>
+<td>サシスセソ</td>
+</tr>
+<tr class="even">
+<td>t</td>
+<td>たちつてと</td>
+<td>タチツテト</td>
+</tr>
+<tr class="odd">
+<td>n</td>
+<td>なにぬねの</td>
+<td>ナニヌネノ</td>
+</tr>
+<tr class="even">
+<td>h</td>
+<td>はひふへほ</td>
+<td>ハヒフヘホ</td>
+</tr>
+<tr class="odd">
+<td>m</td>
+<td>まみむめも</td>
+<td>マミムメモ</td>
+</tr>
+<tr class="even">
+<td>y</td>
+<td>や・ゆ・よ</td>
+<td>ヤ・ユ・ヨ</td>
+</tr>
+<tr class="odd">
+<td>r</td>
+<td>らりるれろ</td>
+<td>ラリルレロ</td>
+</tr>
+<tr class="even">
+<td>w</td>
+<td>わ・・・を</td>
+<td>ワ・・・ヲ</td>
+</tr>
+<tr class="odd">
+<td>n</td>
+<td>ん</td>
+<td>ン</td>
+</tr>
+</tbody>
+</table>
+<p>Notes:</p>
+<p>Each of these has very specific usage in modern Japanese orthography.</p>
+<ul>
+<li>Hiragana is used for many words lacking Chinese characters and to “fill in” the pronunciation of a word that is spelled only partly with a Chinese character.</li>
+<li>Katakana is used for more recent loan words from English, e.g., ブルームバーグ (“Burūmubāgu” for “Bloomberg”), and for emphasis.</li>
+<li>Combined with Latin letters (“rōmaji”), any given Japanese sentence will have <em>four</em> scripts.</li>
+</ul>
+<hr />
+<p>Examples</p>
+<ul>
+<li>走る (read “hashiru”, “to run”) =
+<ul>
+<li>走 (Chinese character pronounced “hashi”) +</li>
+<li>る (hiragana, “ru”)</li>
+</ul></li>
+<li>話す (read “hanasu”, “to speak”) =
+<ul>
+<li>話 (Chinese character pronounced “hana”) +</li>
+<li>す (hiragana, “su”)</li>
+</ul></li>
+</ul>
+<hr />
+<video width="500px" controls>
+<source src="https://fasiha.github.io/cjk-2021/flick.mp4" type="video/mp4">
+</video>
+<p>Notes:</p>
+<h3 id="flick-input">Flick input</h3>
+<p>Because Japanese has five vowels per consonants, and there are ten-ish consonants, a rather elegant solution is</p>
+<ul>
+<li>use a keypad-like layout for consonants, where each consonant</li>
+<li>unfolds into a north/south/east/west choice to pick the vowel.</li>
+</ul>
+<p>If you hold down the consonant long enough, you see the four directional vowels to choose from via a swipe, with the fifth being “no swipe”.</p>
+<p>Typing fast, you don’t need to wait for the vowel menu to unfold, you just “flick”.</p>
+<p>Same efficiency hit as pinyin/bopomofo: usually the auto-suggestion has the Chinese characters you want but sometimes you have to stop and help it break homophony.</p>
+<hr />
+<p><img src="https://fasiha.github.io/cjk-2021/ios-english.jpg"></p>
+<p>Notes:</p>
+<p><a href="https://twitter.com/benskuhn/status/1361736200734855171">Ben Kuhn</a> quotes <em>Creative Selection</em> by Ken Kocienda on this early design for the iPhone keyboard: “tap to get the top letter, swipe left/right to get the bottom letters”.</p>
+<hr />
+<h3 id="natural-language-processing">Natural language processing</h3>
+<p><img src="https://fasiha.github.io/cjk-2021/ln.jpg"></p>
+<p>Notes:</p>
+<p>Image: Makoto Shinkai, 君の名は。 (<em>Your Name.</em>) light novel.</p>
+<p>Japanese, like Chinese, doesn’t use spaces to separate words. This makes segmentation a challenging machine-learning-intensive pre-processing step to natural language processing (NLP)</p>
+<p>When you double-click Japanese text on desktop or long-press on mobile, the app usually does an ok job selecting what you think of as a “word”: Safari, Chrome, Word, etc., have built-in dictionaries to decide word boundaries.</p>
+<p>Some (Firefox, Notepad) just select runs of adjacent hiragana/katakana/Chinese characters.</p>
+<p>Others though (<a href="https://github.com/Microsoft/vscode/issues/50045">VS Code</a>) just select the whole line 😢.</p>
+<hr />
+<h2 id="korean-朝鮮語">Korean 朝鮮語</h2>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Hunminjeongum.jpg"></p>
+<p>Notes:</p>
+<p>Image: opening page of 訓民正音 (훈민정음, “hun min jeong eum” in Korean, “kun min sei on” in Japanese, “Instructions to the nation for correct pronunciation”) by Sejong the Great, 1446. <a href="https://commons.wikimedia.org/wiki/File:Hunminjeongum.jpg">Source</a></p>
+<p>Korean is linguistically <em>another</em> totally different language from Japanese and from Chinese, but due to millenia of cultural diffusion with China and unfortunately decades of occupation and colonization by Japan, a lot of vocabulary has transferred to it from both of these.</p>
+<p>Like Japanese, Korean’s upper register is filled with words imported from Chinese during ancient times.</p>
+<h3 id="chinese-characters-hanja">Chinese characters (hanja)</h3>
+<hr />
+<p>Examples</p>
+<ul>
+<li>人間
+<ul>
+<li>“nin gen” (Japanese)</li>
+<li>“in gan” (Korean)</li>
+<li>“rén jiān” in modern Mandarin</li>
+<li>“ngìn kiên” in Hakka (means “human”, as opposed to a nine-tailed fox)</li>
+</ul></li>
+<li>約束
+<ul>
+<li>“yaku soku” (Japanese),</li>
+<li>“yak sok” (Korean)</li>
+<li>“yuē shù” in modern Mandarin</li>
+<li>“yok suk” in Hakka (means “promise”)</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="hangul">Hangul</h3>
+<p><img src="https://fasiha.github.io/cjk-2021/sejong.jpg"></p>
+<p>Notes:</p>
+<p>Image: 9.5 meter tall statue of Sejong the Great installed in 2009 in Seoul. <a href="https://www.flickr.com/photos/koreanet/4273003660">Republic of Korea</a></p>
+<p>However, unlike in Japanese, the Koreans have <em>hangul</em>, a phonetic writing system. This is a Big Deal.</p>
+<p>King Sejong the Great is said to have personally perfected hangul in 1443 and encouraged its spread despite the learned elite’s dislike. (He is also a perennial star and side character in Korean dramas.)</p>
+<p>Hangul Day is a national holiday in both Koreas.</p>
+<p>It’s a matter of national pride that this writing system is “perfect”: it’s logical, compact, easy to learn, and maps to the sounds of Korean very well.</p>
+<hr />
+<p>ㄱ ㄴ ㄷ ㄹ ㅁ ㅂ ㅅ ㅇ ㅈ ㅊ ㅋ ㅌ ㅍ ㅎ</p>
+<p>ㅏ ㅑ ㅓ ㅕ ㅗ ㅛ ㅜ ㅠ ㅡ ㅣ</p>
+<p>Notes:</p>
+<p>Hangul is made up of twenty-four symbols (called <em>jamo</em>): fourteen consonants (ㄱㄴㄷㄹㅁ…) and ten vowels (ㅏㅑㅓㅕㅗ…), plus several pairs of two-consonant and two-vowel combinations.</p>
+<p>These symbols’ shapes are said to mimic the shape of the mouth when producing them.</p>
+<hr />
+<p><img src="https://fasiha.github.io/cjk-2021/hangul-placement.png"></p>
+<p>Notes:</p>
+<p>Image: excerpt from a much more detailed chart of Hangul letter order from <a href="https://commons.wikimedia.org/wiki/File:Hangeul_letter_order.svg">Wikipedia</a>.</p>
+<p>But the cool thing is, you don’t write these out linearly like bopomofo or hiragana or Latin—rather, these jamo combine into syllables in <em>two dimensions</em>.</p>
+<p>This can happen because Korean morphemes (the smallest unit of meaning) are invariably made up of</p>
+<ul>
+<li>an <em>initial</em> consonant (single or doubled),</li>
+<li>a <em>medial</em> vowel (or diphthong), and</li>
+<li>optionally, a <em>final</em> consonant or consonant cluster.</li>
+</ul>
+<p>These snap together like Legos, following straightforward rules depending on the length of the morpheme.</p>
+<p>Hangul did not replace Chinese characters (hanja), then or now. Hangul only became official due to nationalism in the late 1800s.</p>
+<p>Today, even high schoolers only learn Chinese characters in elective courses.</p>
+<p>Newspapers of record tend to have ~5% Chinese characters, with political news often having (much) more.</p>
+<p>Korean tends to be written with spaces so front-end NLP is easier than Chinese or Japanese.</p>
+<hr />
+<h2 id="ℐ𝗖𝕆𝖉𝙴">Ⓤ🅽ℐ𝗖𝕆𝖉𝙴</h2>
+<p>Let’s talk about Unicode.</p>
+<p>Notes:</p>
+<p>A monumental achievement, today with Unicode 13 containing &gt;140,000 code points.</p>
+<p>But it’s driven by committees of experts, who are falliable.</p>
+<h3 id="the-hangul-trainwreck">The hangul trainwreck</h3>
+<p>Unicode 1.0 released in 1991 had 2,350 hangul syllables and jamo. This is far fewer than the full set of syllables that can be constructed. The rest were assumed to be typed and rendered by combining individuals, following the design of the Korean character set (KS X 1001) that Unicode followed.</p>
+<p>Unicode 1.1 in 1993 added 4,300 more syllables, following KS X 1002 and another partial set, again far fewer than needed by modern Korean.</p>
+<p>Unicode 1.0 was never an official or national standard, and 1.x were tentative. Both are obsolete.</p>
+<p>Unicode 2.0 in in 1996 finally threw out all ~6,500 hangul characters and created the Hangul Syllables block in a totally different part of the plane containing all ~11,000 hangul and jamo used today. The obsolete hangul code points are now used for rare Chinese characters…</p>
+<p>We give each full hangul syllable its own code point because, in UTF-8, 훯 (“hwolh”) is three bytes, and each of its combining components, ᄒ (“h”) and ᅯ (“wo”) and ᆶ (“lh”), is also three bytes.</p>
+<p>In fact, try copy-pasting these three simpler hangul and then removing the spaces between them: ᄒ / ᅯ / ᆶ. Your operating system will seamlessly combine them into the larger Unicode code point (party trick via <a href="http://www.gernot-katzers-spice-pages.com/var/korean_hangul_unicode.html">Gernot Katzer</a>).</p>
+<hr />
+<h3 id="han-unification">“Han Unification”</h3>
+<p><img src="https://fasiha.github.io/cjk-2021/Source_Han_Sans_Version_Difference.svg"></p>
+<p>Notes:</p>
+<hr />
+<p><img src="https://fasiha.github.io/cjk-2021/cjkv-table-3-99.png"></p>
+<p>Notes:</p>
+<p>Image: Lunde, <em>CJKV Information Processing</em>.</p>
+<p>Unicode 2.0 also added ~21,000 Chinese characters; 3.0 in 1999 added ~6,500; 3.1 in 2001 added another ~43,000 (Table 3-82 in <em>CJKV Information Processing</em>).</p>
+<p>From the beginning, their goal was to “unify all ideographs from the many CJKV national character set standards into a single set of ideographs” (Lunde, p. 155) and this came to have the problematic name, “Han unification”.</p>
+<p>“Unification” sought to tame the bewildering amount of variation of characters across East and Southeast Asia such that characters that had the same</p>
+<ol>
+<li>meaning and</li>
+<li>abstract shape,</li>
+</ol>
+<p>but varied by typeface (font) were assigned to a single Unicode point.</p>
+<p>But this turned out to be a hard problem, from many linguistic and historical perspectives. Lunde: “Unfortunately, early standards were inconsistent in their encoding models for ideographs, and some still are” (p. 159).</p>
+<p>At various points Unicode incorrectly failed to unify characters <em>and</em> was incorrectly too eager to unify.</p>
+<hr />
+<ul>
+<li>辶 can look like</li>
+<li>⻌ (PRC—simplified Chinese characters),</li>
+<li>⻍ (Japan, Korea), or</li>
+<li>⻎ (Taiwan, Hong Kong—traditional Chinese characters).</li>
+</ul>
+<p>All four of these are their own Unicode code points, and there’s a unified code point, 辶.</p>
+<p>Notes:</p>
+<p>Via <a href="https://twitter.com/ken_lunde/status/540136581407834113">@ken_lunde</a></p>
+<p>Unification has been erratic even for characters that the PRC simplified in the 1950s and 1960s.</p>
+<hr />
+<p>We haven’t talked about ⥌<a href="https://netflixtechblog.com/implementing-japanese-subtitles-on-netflix-c165fbe61989">vertical scripts</a>⥍, <a href="https://monocle.com/radio/shows/monocle-on-design/extra-236/">fonts</a> 🆃, <a href="https://www.youtube.com/watch?v=9BaLTBTqHmw">emoji</a> (^‿^), or <a href="https://www.theverge.com/21327599/how-to-make-emoji-yawning-face-waffle-proposal-unicode">waffles</a> 🥞.</p>
+</body>
+</html>

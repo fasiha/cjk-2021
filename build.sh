@@ -1,0 +1,1 @@
+pandoc -s --toc -c perfectmotherfuckingwebsite.css -f markdown_github-hard_line_breaks+yaml_metadata_block+markdown_in_html_blocks+auto_identifiers -t html5 README.md > index.html
