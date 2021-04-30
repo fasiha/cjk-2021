@@ -330,7 +330,7 @@ But Japan was a cultural vassal of China for much of the last 1500 years, like a
 
 漢字 = “hàn zì” vs“kan ji” — “Chinese character”
 
-天使 = “tiān shǐ” vs “ten shi” — 👼
+天使 = “tiān shǐ” vs “ten shi” — “👼”
 
 Notes:
 
