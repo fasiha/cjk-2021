@@ -383,12 +383,10 @@ Notes:
 Each of these has very specific usage in modern Japanese orthography. 
 
 - Hiragana is used for many words lacking Chinese characters and to “fill in” the pronunciation of a word that is spelled only partly with a Chinese character.
-- Katakana is used for more recent loan words from English, e.g., ブルームバーグ (“Burūmubāgu” for “Bloomberg”), and for emphasis.
+- Katakana is used for more recent loan words from English, and for emphasis.
 - Combined with Latin letters (“rōmaji”), any given Japanese sentence will have *four* scripts.
 
 ---
-
-Examples
 
 - 走る (read “hashiru”, “to run”) = 
   - 走 (Chinese character pronounced “hashi”) +
@@ -396,6 +394,10 @@ Examples
 - 話す (read “hanasu”, “to speak”) = 
   - 話 (Chinese character pronounced “hana”) + 
   - す (hiragana, “su”)
+
+・・・
+
+ブルームバーグ (“Burūmubāgu” for “Bloomberg”),
 
 ---
 
