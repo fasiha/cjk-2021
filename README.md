@@ -185,7 +185,7 @@ Derived from the Chinese *telegraph* code, whose “codebook … shows one-to-on
 
 ### How are these input?
 
-<video controls><source src="https://fasiha.github.io/cjk-2021/toshiba.mp4" type="video/mp4"></video>
+<video controls autoplay><source src="https://fasiha.github.io/cjk-2021/toshiba.mp4" type="video/mp4"></video>
 
 Notes:
 
@@ -247,7 +247,7 @@ Easy for English speakers to learn!
 
 ---
 
-<video controls><source src="https://fasiha.github.io/cjk-2021/chinese-ios.mp4" type="video/mp4"></video>
+<video controls autoplay><source src="https://fasiha.github.io/cjk-2021/chinese-ios.mp4" type="video/mp4"></video>
 
 Notes:
 
@@ -292,7 +292,7 @@ Faster typing but it’s a skill that needs practice
 
 #### Handwriting recognition
 
-<video controls><source src="https://fasiha.github.io/cjk-2021/handwriting.mp4" type="video/mp4"></video>
+<video controls autoplay><source src="https://fasiha.github.io/cjk-2021/handwriting.mp4" type="video/mp4"></video>
 
 Notes:
 
