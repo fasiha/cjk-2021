@@ -1,9 +1,12 @@
 ---
 title: 'Chinese 中 Japanese 日 Korean 韓 (CJK) text processing and languages'
 description: 'Annotated slides'
+lang: 'en'
 ---
 
 # Chinese 中 Japanese 日 Korean 韓 (CJK) text processing and languages
+
+—[Ahmed Fasih](https://fasiha.github.io/#contact)
 
 Notes:
 
@@ -22,7 +25,7 @@ Why lump these three extremely different languages into one abbreviation? Seems 
 
 ---
 
-👋 **Handwavium** 👋 This [900-page door stopper](https://www.oreilly.com/library/view/cjkv-information-processing/9780596156114/) by Ken Lunde
+👋 **Handwavium** 👋 [CJKV Information Processing](https://www.oreilly.com/library/view/cjkv-information-processing/9780596156114/) by Ken Lunde, a 900-page door stopper
 
 ![Lunde, CJKV Information Procesing cover](https://fasiha.github.io/cjk-2021/cjkv-cover.png)
 
@@ -31,6 +34,8 @@ Notes:
 Chinese, Japanese, and Korean (and here Vietnamese) get lumped together because, to varying degrees, they all make use of *Chinese characters*, which have traditionally been very interesting from a digital representation perspective
 
 This is compounded by the fact that all these also use *other* scripts with their own quirks, so there are many considerations for correct and readable textual representation
+
+There is no doubt also a sociopolitical dimension—these languages represent wealthy, powerful countries with considerable interest in seeing their text digitized. Engineers like Lunde who worked to support one of these languages on early computing systems likely also worked with the one or more of the rest.
 
 > Another interesting commonality: their scripts (Chinese characters *and* others) are readily monospaced.
 
@@ -42,9 +47,11 @@ This is compounded by the fact that all these also use *other* scripts with thei
 
 Notes:
 
-To linguists, languages are *spoken*
+To linguists like [@lynnguist](https://twitter.com/lynneguist) (above) and [John McWhorter](https://slate.com/podcasts/lexicon-valley), languages are *spoken*
 
 Their written representations are a very ancillary concern
+
+The main linguistic concept we’ll invoke is that, while two languages that live next to each other may mix a lot of *vocabulary*, their bones tend to stay fixed. Differences in syntax and grammar—how the languages put words and sentences together, what they choose to emphasize—tend to persist.
 
 ---
 
@@ -54,7 +61,7 @@ Their written representations are a very ancillary concern
 
 Notes:
 
-> ([Image](https://commons.wikimedia.org/wiki/File:The_Calligraphy_Model_Sunny_after_Snow_by_Wang_Xizhi.jpg) is an excerpt from [Wang Xizhi](https://en.wikipedia.org/wiki/Wang_Xizhi) (303–361 CE), “Sunny after Snow” calligraphy model on paper, most likley a Tang (618~907 CE) copy)
+> [Image](https://commons.wikimedia.org/wiki/File:The_Calligraphy_Model_Sunny_after_Snow_by_Wang_Xizhi.jpg): excerpt from [Wang Xizhi](https://en.wikipedia.org/wiki/Wang_Xizhi) (303–361 CE), “Sunny after Snow” calligraphy model on paper, most likley a Tang (618~907 CE) copy
 
 It’s well-known that “Chinese”, as any kind of unified spoken language, is a politically-backed mirage: Mandarin, Shanghaiese, Cantonese, Fujianese, etc., are mutually unintelligible and vary considerably “in grammar, syntax, phonology, vocabulary, etc.” ([Language Log](https://languagelog.ldc.upenn.edu/nll/?p=4628))
 
@@ -64,14 +71,14 @@ However! Speakers of these languages will use Chinese characters to *write*, so 
 
 ---
 
-### Pictographs
+### Pictographs (hànzì)
 
 <img src="https://fasiha.github.io/cjk-2021/bone__FS-7864_17.jpg">
 
 
 Notes:
 
-Image: bone fragment, 1300-1050 BCE. [Sackler Gallery, Smithsonian](https://asia.si.edu/object/S2012.9.461/)
+> Image: bone fragment, 1300-1050 BCE. [Sackler Gallery, Smithsonian](https://asia.si.edu/object/S2012.9.461/)
 
 Like every writing system invented (until the Phonecians invented an abjad, which led to alphabets and syllabaries), the ancient Chinese carved pictograms on bone or turtle shells to represent things.
 
@@ -84,7 +91,7 @@ The earliest of these representations come from oracle bones found dating from t
 
 Notes:
 
-Image: turtle carapace, 1300-1050 BCE. [Sackler Gallery, Smithsonian](https://asia.si.edu/object/S2012.9.445/)
+> Image: turtle carapace, 1300-1050 BCE. [Sackler Gallery, Smithsonian](https://asia.si.edu/object/S2012.9.445/)
 
 ---
 
@@ -99,6 +106,9 @@ Imagine the sun 🌞
 | 200 BCE | <img src="https://fasiha.github.io/cjk-2021/日-seal.svg" width="50em"> |
 | Today | 日 |
 
+Notes:
+
+> Images from [Wiktionary](https://en.wiktionary.org/wiki/%E6%97%A5#Glyph_origin)
 
 ---
 
@@ -118,6 +128,9 @@ Today:
 
 (A box with *two* lines, or 👁 👀)
 
+Notes:
+
+> Images from [Wiktionary](https://en.wiktionary.org/wiki/%E7%9B%AE#Glyph_origin)
 
 ---
 
@@ -167,6 +180,8 @@ Although today spoken Mandarin only has around 450 syllables (many of which exis
 
 Notes:
 
+> Image: self: poster of all Japanese grade school kanji from [KanjiPoster.com](https://kanjiposter.com)
+
 This leads to the classic data representation problem: literally thousands of characters for daily use—
 - ~2500 taught in elementary school and ~1000 taught in middle school in PRC ([Wikipedia](https://en.wikipedia.org/wiki/List_of_Commonly_Used_Characters_in_Modern_Chinese))
 - 2663 tested by HSK level 6 ([Wikipedia](https://en.wikipedia.org/wiki/Hanyu_Shuiping_Kaoshi#Written_test))), maybe up to a hundred thousand characters for all historic texts.
@@ -189,7 +204,7 @@ Derived from the Chinese *telegraph* code, whose “codebook … shows one-to-on
 
 Notes:
 
-Toshiba typewriter, produced 1940–1954. 1172 total characters ([YouTube](https://www.youtube.com/watch?v=JZcui85b4EE); [Virtual Typewriter Museum](http://www.typewritermuseum.org/collection/brands/index.php3?machine=toshiba&cat=il))
+> Video: Toshiba typewriter, produced 1940–1954. 1172 total characters ([YouTube](https://www.youtube.com/watch?v=JZcui85b4EE); [Virtual Typewriter Museum](http://www.typewritermuseum.org/collection/brands/index.php3?machine=toshiba&cat=il))
 
 ---
 
@@ -200,7 +215,8 @@ Bopomofo is an alphabet for Mandarin and related dialects (as in, real dialects)
 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Bopomofo.jpg">
 
 Note:
-Image: Taiwanese cell phone [Source](https://commons.wikimedia.org/wiki/File:Bopomofo.jpg)
+
+> Image: Taiwanese cell phone [Source](https://commons.wikimedia.org/wiki/File:Bopomofo.jpg)
 
 ---
 
@@ -251,7 +267,7 @@ Easy for English speakers to learn!
 
 Notes:
 
-Video: [Fluent in Mandarin](https://www.youtube.com/watch?v=AU3zaoj5_e4)
+> Video: [Fluent in Mandarin](https://www.youtube.com/watch?v=AU3zaoj5_e4)
 
 Due to the high amount of homophony in Mandarin, IME tends to be slower than using non-phonetic input. You type in a string of sounds and usually your smartphone gets the characters right (sentence context, usage history, global patterns), but if not you have to select which character you meant.
 
@@ -268,9 +284,9 @@ This has been a major problem with React and other browser frameworks that want 
 
 Notes: 
 
-If you’re familiar with *writing* a character (something increasingly rare after leaving school), you can specify its *component pieces* for rapid lookup of a character.
+> Image: from Lunde, *CJKV Information Processing*, figure 2-2, showing the breakdown of 作 into radicals and strokes
 
-Image: Lunde, *CJKV Information Processing*.
+If you’re familiar with *writing* a character (something increasingly rare after leaving school), you can specify its *component pieces* for rapid lookup of a character.
 
 ---
 
@@ -278,7 +294,7 @@ Image: Lunde, *CJKV Information Processing*.
 
 Notes:
 
-Image: a Wubi keyboard. [Source](https://commons.wikimedia.org/wiki/File:Wubi_keyboard-cut.png)
+> Image: a Wubi keyboard. [Source](https://commons.wikimedia.org/wiki/File:Wubi_keyboard-cut.png)
 
 There’s only so many of these components, and Each key on a QWERTY keyboard maps to a certain set of character components (often themselves characters).
 
@@ -296,7 +312,7 @@ Faster typing but it’s a skill that needs practice
 
 Notes:
 
-Video: [Fluent in Mandarin](https://www.youtube.com/watch?v=AU3zaoj5_e4) again
+> Video: [Fluent in Mandarin](https://www.youtube.com/watch?v=AU3zaoj5_e4) again
 
 Introduced mid-2008 with iOS 2.0 (recall copy-paste was added iOS 3.0, mid-2009).
 
@@ -314,7 +330,7 @@ Most recently: speech-to-text.
 
 Notes:
 
-Image: *Cry for the Noble Saichō* by Emperor Saga on the death of Saichō, circa 822 CE. Saichō and a fellow Buddhist monk Kūkai are said to have introduced tea to Japan from China. [Source](https://en.wikipedia.org/wiki/File:Koku_Saitcho_shounin.jpg)
+> Image: *Cry for the Noble Saichō* by Emperor Saga on the death of Saichō, circa 822 CE. Saichō and a fellow Buddhist monk Kūkai are said to have introduced tea to Japan from China. [Source](https://en.wikipedia.org/wiki/File:Koku_Saitcho_shounin.jpg)
 
 ### Chinese characters (kanji)
 
@@ -334,7 +350,7 @@ But Japan was a cultural vassal of China for much of the last 1500 years, like a
 
 Notes:
 
-Image: [MIKI Yoshihito](https://www.flickr.com/photos/mujitra/2392215954/)
+> Image: [MIKI Yoshihito](https://www.flickr.com/photos/mujitra/2392215954/)’s photo of a Kirin beer advertisement
 
 As characters were imported from China over the Tang and Song and later dynasties, some were used to write native Japanese words, but many represented totally new concepts lacking native equivalents (e.g., Buddhist terms), and Japanese scholars pronounced these the same as the Middle Chinese.
 
@@ -350,7 +366,7 @@ Students begin learning to write Chinese characters in first grade, and by the t
 
 Notes:
 
-Image: Murasaki Shikibu finished *The Tale of Genji* circa 1012 CE. Though very popular, the earliest extant manuscript is from more than 200 years later. It is likely to have been written in both kanji and hiragana. Woodblock print by Komatsuken in 1765. [Source](https://collections.mfa.org/objects/233977)
+> Image: woodblock print by Komatsuken in 1765 ([source](https://collections.mfa.org/objects/233977)) of Murasaki Shikibu, who finished *The Tale of Genji* circa 1012 CE. Though very popular, the earliest extant manuscript is from more than 200 years later. It is likely to have been written in both kanji and hiragana. 
 
 ### Japanese syllabaries
 
@@ -399,10 +415,6 @@ Each of these has very specific usage in modern Japanese orthography.
 
 ブルームバーグ (“Burūmubāgu” for “Bloomberg”),
 
----
-
-<video width="500px" controls><source src="https://fasiha.github.io/cjk-2021/flick.mp4" type="video/mp4"></video>
-
 Notes:
 
 ### Flick input
@@ -419,11 +431,19 @@ Same efficiency hit as pinyin/bopomofo: usually the auto-suggestion has the Chin
 
 ---
 
+<video width="500px" controls><source src="https://fasiha.github.io/cjk-2021/flick.mp4" type="video/mp4"></video>
+
+Notes:
+
+> Video: self, iPhone kana keyboard demo
+
+---
+
 <img src="https://fasiha.github.io/cjk-2021/ios-english.jpg">
 
 Notes:
 
-[Ben Kuhn](https://twitter.com/benskuhn/status/1361736200734855171) quotes *Creative Selection* by Ken Kocienda on this early design for the iPhone keyboard: “tap to get the top letter, swipe left/right to get the bottom letters”.
+> Image: via [Ben Kuhn](https://twitter.com/benskuhn/status/1361736200734855171) quoting *Creative Selection* by Ken Kocienda on this early design for the iPhone keyboard: “tap to get the top letter, swipe left/right to get the bottom letters”.
 
 ---
 
@@ -433,7 +453,7 @@ Notes:
 
 Notes:
 
-Image: Makoto Shinkai, 君の名は。 (*Your Name.*) light novel.
+> Image: Makoto Shinkai, 君の名は。 (*Your Name.*) light novel.
 
 Japanese, like Chinese, doesn’t use spaces to separate words. This makes segmentation a challenging machine-learning-intensive pre-processing step to natural language processing (NLP)
 
@@ -451,7 +471,7 @@ Others though ([VS Code](https://github.com/Microsoft/vscode/issues/50045)) just
 
 Notes:
 
-Image: opening page of 訓民正音 (훈민정음, “hun min jeong eum” in Korean, “kun min sei on” in Japanese, “Instructions to the nation for correct pronunciation”) by Sejong the Great, 1446. [Source](https://commons.wikimedia.org/wiki/File:Hunminjeongum.jpg)
+> Image: opening page of 訓民正音 (훈민정음, “hun min jeong eum” in Korean, “kun min sei on” in Japanese, “Instructions to the nation for correct pronunciation”) by Sejong the Great, 1446. [Source](https://commons.wikimedia.org/wiki/File:Hunminjeongum.jpg)
 
 Korean is linguistically *another* totally different language from Japanese and from Chinese, but due to millenia of cultural diffusion with China and unfortunately decades of occupation and colonization by Japan, a lot of vocabulary has transferred to it from both of these.
 
@@ -486,7 +506,7 @@ Today, Chinese characters are not necessary to read or write Korean. High school
 
 Notes:
 
-Image: 9.5 meter tall statue of Sejong the Great installed in 2009 in Seoul. [Republic of Korea](https://www.flickr.com/photos/koreanet/4273003660)
+> Image: 9.5 meter tall statue of Sejong the Great installed in 2009 in Seoul. [Republic of Korea](https://www.flickr.com/photos/koreanet/4273003660)
 
 However, unlike in Japanese, the Koreans have *hangul*, a phonetic writing system. This is a Big Deal.
 
@@ -514,7 +534,7 @@ These symbols’ shapes are said to mimic the shape of the mouth when producing 
 
 Notes:
 
-Image: excerpt from a much more detailed chart of Hangul letter order from [Wikipedia](https://commons.wikimedia.org/wiki/File:Hangeul_letter_order.svg).
+> Image: excerpt from a much more detailed chart of Hangul letter order from [Wikipedia](https://commons.wikimedia.org/wiki/File:Hangeul_letter_order.svg).
 
 But the cool thing is, you don’t write these out linearly like bopomofo or hiragana or Latin—rather, these jamo combine into syllables in *two dimensions*.
 
@@ -563,13 +583,15 @@ In fact, try copy-pasting these three simpler hangul and then removing the space
 
 Notes:
 
+> Image: regional differences in a single character per [Wikipedia](https://commons.wikimedia.org/wiki/File:Source_Han_Sans_Version_Difference.svg)
+
 ---
 
 <img src="https://fasiha.github.io/cjk-2021/cjkv-table-3-99.png">
 
 Notes:
 
-Image: Lunde, *CJKV Information Processing*.
+> Image: from Lunde, *CJKV Information Processing*, table 3-99: regional differences for several characters
 
 Unicode 2.0 also added ~21,000 Chinese characters; 3.0 in 1999 added ~6,500; 3.1 in 2001 added another ~43,000 (Table 3-82 in *CJKV Information Processing*).
 
@@ -603,3 +625,17 @@ Unification has been erratic even for characters that the PRC simplified in the 
 ---
 
 We haven’t talked about ⥌[vertical scripts](https://netflixtechblog.com/implementing-japanese-subtitles-on-netflix-c165fbe61989)⥍, [fonts](https://monocle.com/radio/shows/monocle-on-design/extra-236/) 🆃, [emoji](https://www.youtube.com/watch?v=9BaLTBTqHmw) (^‿^), or [waffles](https://www.theverge.com/21327599/how-to-make-emoji-yawning-face-waffle-proposal-unicode) 🥞.
+
+Notes:
+
+## Colophon
+
+This document lives as a Markdown file on GitHub: [README.md](https://github.com/fasiha/cjk-2021/blob/gh-pages/README.md)
+
+It was converted to a normal [HTML page](https://fasiha.github.io/cjk-2021/) with [Pandoc](https://pandoc.org/). You can see the exact Pandoc command in the [build script](https://github.com/fasiha/cjk-2021/blob/gh-pages/build.sh). CSS derived from [Perfect Motherfucking Website](https://perfectmotherfuckingwebsite.com/)
+
+This Markdown works perfectly with [mark.show](https://mark.show) by [@motyar](https://twitter.com/motyar)! Here’s a direct link to view this document as a [slideshow on mark.show](https://mark.show/https://fasiha.github.io/cjk-2021/README.md)
+
+While I ordinarily release my creative content into the public domain (via Unlicense or CC0), I have chosen to release this under a [Creative Commons Attribution](https://creativecommons.org/licenses/by/4.0/) license. My friends with less privilege than me and who can’t yet release your work completely unencumbered—I see you. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+
+[Get in touch](https://fasiha.github.io/#contact)
