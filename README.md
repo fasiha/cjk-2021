@@ -622,6 +622,18 @@ Via [@ken_lunde](https://twitter.com/ken_lunde/status/540136581407834113)
 
 Unification has been erratic even for characters that the PRC simplified in the 1950s and 1960s.
 
+Today, things *mostly* just work. From users’ perspectives—your Google, Apple, Microsoft, etc., devices know what language you’re typing in and know what codepoints to use. As a developer, there are always surprises, and of course more work to do.
+
+If only to make sure you don't end up like this:
+
+---
+
+<img src="https://fasiha.github.io/cjk-2021/wongmjane.png">
+
+Notes:
+
+> Image: screenshot of [@wongmjane](https://mobile.twitter.com/wongmjane/status/1391669787663601665): “McDonald’s Taiwan garbled their ads using incorrect text encoding (GBK being encoded as UTF-8) to promote their new sandwiches”.
+
 ---
 
 We haven’t talked about ⥌[vertical scripts](https://netflixtechblog.com/implementing-japanese-subtitles-on-netflix-c165fbe61989)⥍, [fonts](https://monocle.com/radio/shows/monocle-on-design/extra-236/) 🆃, [emoji](https://www.youtube.com/watch?v=9BaLTBTqHmw) (^‿^), or [waffles](https://www.theverge.com/21327599/how-to-make-emoji-yawning-face-waffle-proposal-unicode) 🥞.
