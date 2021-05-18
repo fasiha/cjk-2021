@@ -80,7 +80,7 @@ Notes:
 
 > Image: bone fragment, 1300-1050 BCE. [Sackler Gallery, Smithsonian](https://asia.si.edu/object/S2012.9.461/)
 
-Like every writing system invented (until the Phonecians invented an abjad, which led to alphabets and syllabaries), the ancient Chinese carved pictograms on bone or turtle shells to represent things.
+Like every writing system invented (until the Phonecians invented an abjad, which led to alphabets and syllabaries), the ancient Chinese used pictograms. They carved these representations on bone or turtle shells.
 
 The earliest of these representations come from oracle bones found dating from the Shang dynasty. They were inscribed on ox bones or turtle plastrons (undershell), which were then heated till they cracked, or stabbed with a hot poker—the cracks were inspected for divination. Thousands of characters have been found on these bones and shells, indicating a long incubation period that is alas as of now invisible in the archaeological record.
 
