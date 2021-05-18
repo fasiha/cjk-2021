@@ -184,7 +184,7 @@ Notes:
 
 This leads to the classic data representation problem: literally thousands of characters for daily use—
 - ~2500 taught in elementary school and ~1000 taught in middle school in PRC ([Wikipedia](https://en.wikipedia.org/wiki/List_of_Commonly_Used_Characters_in_Modern_Chinese))
-- 2663 tested by HSK level 6 ([Wikipedia](https://en.wikipedia.org/wiki/Hanyu_Shuiping_Kaoshi#Written_test))), maybe up to a hundred thousand characters for all historic texts.
+- 2663 tested by HSK level 6 ([Wikipedia](https://en.wikipedia.org/wiki/Hanyu_Shuiping_Kaoshi#Written_test)), maybe up to a hundred thousand characters for all historic texts.
 
 > We’ll get to it soon but to acknowledge the elephant in the room: Unicode has made things much better but it made things much worse at first, and it had to come from somewhere!
 
