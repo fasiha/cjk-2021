@@ -483,16 +483,16 @@ Like Japanese, Korean’s upper register is filled with words imported from Chin
 
 Examples
 
-- 人間
-  - “nin gen” (Japanese)
+- 人間 (“human”, as opposed to a nine-tailed fox)
   - “in gan” (Korean)
+  - “nin gen” (Japanese)
+  - “ngìn kiên” in Hakka
   - “rén jiān” in modern Mandarin
-  - “ngìn kiên” in Hakka (means “human”, as opposed to a nine-tailed fox)
-- 約束
-  - “yaku soku” (Japanese), 
+- 約束 (“promise”)
   - “yak sok” (Korean)
+  - “yaku soku” (Japanese),
+  - “yok suk” in Hakka
   - “yuē shù” in modern Mandarin
-  - “yok suk” in Hakka (means “promise”)
 
 Notes:
 
