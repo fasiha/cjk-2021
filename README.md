@@ -480,6 +480,20 @@ Some (Firefox, Notepad) just select runs of adjacent hiragana/katakana/Chinese c
 
 Others though ([VS Code](https://github.com/Microsoft/vscode/issues/50045)) just select the whole line 😢.
 
+---
+
+<video controls autoplay loop="true"><source src="https://fasiha.github.io/cjk-2021/safari-select.mp4" type="video/mp4"></video>
+
+---
+
+<video controls autoplay loop="true"><source src="https://fasiha.github.io/cjk-2021/firefox-select.mp4" type="video/mp4"></video>
+
+---
+
+<video controls autoplay loop="true"><source src="https://fasiha.github.io/cjk-2021/vscode-select.mp4" type="video/mp4"></video>
+
+Notes:
+
 > For those *interested* in parsing Chinese text: start with [chinese](https://pypi.org/project/chinese/) for Python, which combines segmentation and dictionary lookups. In my experience, the segmentation has been useful for Cantonese as well.
 >
 > For Japanese, check out [fugashi](https://github.com/polm/fugashi) or [SudachiPy](https://github.com/WorksApplications/SudachiPy), both for Python, though [Sudachi](https://github.com/WorksApplications/Sudachi/)’s main implementation is in Java.

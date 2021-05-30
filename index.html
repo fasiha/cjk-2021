@@ -534,6 +534,19 @@
 <p>When you double-click Japanese text on desktop or long-press on mobile, the app usually does an ok job selecting what you think of as a “word”: Safari, Chrome, Word, etc., have built-in dictionaries to decide word boundaries.</p>
 <p>Some (Firefox, Notepad) just select runs of adjacent hiragana/katakana/Chinese characters.</p>
 <p>Others though (<a href="https://github.com/Microsoft/vscode/issues/50045">VS Code</a>) just select the whole line 😢.</p>
+<hr />
+<video controls autoplay loop="true">
+<source src="https://fasiha.github.io/cjk-2021/safari-select.mp4" type="video/mp4">
+</video>
+<hr />
+<video controls autoplay loop="true">
+<source src="https://fasiha.github.io/cjk-2021/firefox-select.mp4" type="video/mp4">
+</video>
+<hr />
+<video controls autoplay loop="true">
+<source src="https://fasiha.github.io/cjk-2021/vscode-select.mp4" type="video/mp4">
+</video>
+<p>Notes:</p>
 <blockquote>
 <p>For those <em>interested</em> in parsing Chinese text: start with <a href="https://pypi.org/project/chinese/">chinese</a> for Python, which combines segmentation and dictionary lookups. In my experience, the segmentation has been useful for Cantonese as well.</p>
 <p>For Japanese, check out <a href="https://github.com/polm/fugashi">fugashi</a> or <a href="https://github.com/WorksApplications/SudachiPy">SudachiPy</a>, both for Python, though <a href="https://github.com/WorksApplications/Sudachi/">Sudachi</a>’s main implementation is in Java.</p>
