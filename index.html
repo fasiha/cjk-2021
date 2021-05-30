@@ -25,6 +25,8 @@
 <li><a href="#chinese-中-japanese-日-korean-韓-cjk-text-processing-and-languages">Chinese 中 Japanese 日 Korean 韓 (CJK) text processing and languages</a><ul>
 <li><a href="#what-id-like-to-talk-about">What I’d like to talk about</a></li>
 <li><a href="#cjk-">“CJK”? 😒</a></li>
+<li><a href="#ascii">ASCII</a></li>
+<li><a href="#utf-8">UTF-8</a></li>
 <li><a href="#linguistics-note">Linguistics note</a></li>
 <li><a href="#chinese-writing-漢語">Chinese writing 漢語</a><ul>
 <li><a href="#pictographs-hànzì">Pictographs (hànzì)</a></li>
@@ -71,6 +73,67 @@
 <blockquote>
 <p>Another interesting commonality: their scripts (Chinese characters <em>and</em> others) are readily monospaced.</p>
 </blockquote>
+<p>Let’s start with some technical foundations.</p>
+<hr />
+<h2 id="ascii">ASCII</h2>
+<p><img src="https://fasiha.github.io/cjk-2021/asciifull.gif" alt="asciitable.com" /></p>
+<p>Notes:</p>
+<p>ASCII is a mapping from all 128 seven-bit numbers (2**7 = 2<sup>7</sup> = 128) to characters, some printable, others invisible.</p>
+<p>Like <em>The Martian</em>, we should all have a copy of this table somewhere handy (I’ve referred to <a href="http://www.asciitable.com" class="uri">http://www.asciitable.com</a> since school).</p>
+<p>Given that most CPUs you and I might program today have a byte (eight bits) as the smallest addressable data width, ASCII fits snugly in one byte.</p>
+<hr />
+<h2 id="utf-8">UTF-8</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Byte 1</th>
+<th>Byte 2</th>
+<th>Byte 3</th>
+<th>Byte 4</th>
+<th>Unicode range</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0xxx xxxx</td>
+<td></td>
+<td></td>
+<td></td>
+<td>U+0 to U+7F (ASCII!)</td>
+</tr>
+<tr class="even">
+<td>110x xxxx</td>
+<td>10xx xxxx</td>
+<td></td>
+<td></td>
+<td>U+80 to U+7FF</td>
+</tr>
+<tr class="odd">
+<td>1110 xxxx</td>
+<td>10xx xxxx</td>
+<td>10xx xxxx</td>
+<td></td>
+<td>U+800 to U+FFFF</td>
+</tr>
+<tr class="even">
+<td>1111 0xxx</td>
+<td>10xx xxxx</td>
+<td>10xx xxxx</td>
+<td>10xx xxxx</td>
+<td>U+10000 to U+10FFFF</td>
+</tr>
+</tbody>
+</table>
+<p>Notes:</p>
+<p>Many (but not anywhere near all!) documents you’ll encounter today will be UTF-8 encoded. This means that the bytes in memory follow the above pattern and can be rapidly grouped into characters of one to four bytes (eight to thirty-bits):</p>
+<ul>
+<li>if a byte starts with the 0 bit, we have a one-byte character—this is ASCII!</li>
+<li>If a byte starts with 110, or 1110, or 11110, we have a two-, three-, or four-byte character.</li>
+<li>If a byte starts with 10, we’re in the middle of a character: go left to find its start.</li>
+</ul>
+<p>This is a <em>really</em> carefully-designed code that satisfies many competing requirements: compactness, self-synchronizing, error handling, and more!</p>
+<p>The binary values in the <code>x</code> spaces above contain the character data: these specify which Unicode point this sequence of bytes represents.</p>
+<p>We’ll come back to Unicode, but let’s talk about these languages.</p>
 <hr />
 <h2 id="linguistics-note">Linguistics note</h2>
 <p><img src="https://fasiha.github.io/cjk-2021/lynnguist.jpg" alt="Dr @lynnguist" /></p>

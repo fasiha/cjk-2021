@@ -39,6 +39,46 @@ There is no doubt also a sociopolitical dimension—these languages represent we
 
 > Another interesting commonality: their scripts (Chinese characters *and* others) are readily monospaced.
 
+Let’s start with some technical foundations.
+
+---
+
+## ASCII
+
+![asciitable.com](https://fasiha.github.io/cjk-2021/asciifull.gif)
+
+Notes:
+
+ASCII is a mapping from all 128 seven-bit numbers (2**7 = 2<sup>7</sup> = 128) to characters, some printable, others invisible.
+
+Like *The Martian*, we should all have a copy of this table somewhere handy (I’ve referred to http://www.asciitable.com since school).
+
+Given that most CPUs you and I might program today have a byte (eight bits) as the smallest addressable data width, ASCII fits snugly in one byte.
+
+---
+
+## UTF-8
+
+| Byte 1 | Byte 2 | Byte 3 | Byte 4 | Unicode range |
+|--------|--------|--------|--------|---------------|
+| 0xxx xxxx |      |        |       | U+0 to U+7F (ASCII!) |
+| 110x xxxx | 10xx xxxx |  |        | U+80 to U+7FF |
+| 1110 xxxx | 10xx xxxx | 10xx xxxx |  | U+800 to U+FFFF |
+| 1111 0xxx | 10xx xxxx | 10xx xxxx | 10xx xxxx | U+10000 to U+10FFFF |
+
+Notes:
+
+Many (but not anywhere near all!) documents you’ll encounter today will be UTF-8 encoded. This means that the bytes in memory follow the above pattern and can be rapidly grouped into characters of one to four bytes (eight to thirty-bits):
+- if a byte starts with the 0 bit, we have a one-byte character—this is ASCII!
+- If a byte starts with 110, or 1110, or 11110, we have a two-, three-, or four-byte character.
+- If a byte starts with 10, we’re in the middle of a character: go left to find its start.
+
+This is a *really* carefully-designed code that satisfies many competing requirements: compactness, self-synchronizing, error handling, and more!
+
+The binary values in the `x` spaces above contain the character data: these specify which Unicode point this sequence of bytes represents.
+
+We’ll come back to Unicode, but let’s talk about these languages.
+
 ---
 
 ## Linguistics note

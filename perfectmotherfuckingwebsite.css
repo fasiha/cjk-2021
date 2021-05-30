@@ -14,3 +14,10 @@ h3 {
 img, video {
   max-width: 100%;
 }
+table, th, td {
+  border: 1px solid lightgray;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
