@@ -304,6 +304,23 @@ You’re not limited by homophony: almost all characters have a unique represent
 
 Faster typing but it’s a skill that needs practice
 
+For example, to type <ruby>很<rt>hěn</rt></ruby><ruby>高兴<rt>gāoxìng</rt></ruby><ruby>见<rt>jiàn</rt></ruby><ruby>到<rt>dào</rt></ruby><ruby>你<rt>nǐ</rt></ruby> with Wubi:
+
+---
+
+![](https://fasiha.github.io/cjk-2021/wubi-analysis/很.png)
+![](https://fasiha.github.io/cjk-2021/wubi-analysis/高.png)
+![](https://fasiha.github.io/cjk-2021/wubi-analysis/兴.png)
+![](https://fasiha.github.io/cjk-2021/wubi-analysis/见.png)
+![](https://fasiha.github.io/cjk-2021/wubi-analysis/到.png)
+![](https://fasiha.github.io/cjk-2021/wubi-analysis/你.png)
+
+Notes:
+
+For more details, especially for the caveat about 见, see [Joe Wicentowski’s exposition](https://chinesemac.org/wubi/xing.html), specifically the Isolation Rule.
+
+This sequence of Wubi strokes was derived from this [Wubi86 layout](https://commons.wikimedia.org/wiki/File:Wubi86_keyboard_layout.png) and some [custom code](https://github.com/fasiha/cjk-2021/blob/gh-pages/wubi-analysis/script.py).
+
 ---
 
 #### Handwriting recognition
