@@ -534,6 +534,12 @@
 <p>When you double-click Japanese text on desktop or long-press on mobile, the app usually does an ok job selecting what you think of as a “word”: Safari, Chrome, Word, etc., have built-in dictionaries to decide word boundaries.</p>
 <p>Some (Firefox, Notepad) just select runs of adjacent hiragana/katakana/Chinese characters.</p>
 <p>Others though (<a href="https://github.com/Microsoft/vscode/issues/50045">VS Code</a>) just select the whole line 😢.</p>
+<blockquote>
+<p>For those <em>interested</em> in parsing Chinese text: start with <a href="https://pypi.org/project/chinese/">chinese</a> for Python, which combines segmentation and dictionary lookups. In my experience, the segmentation has been useful for Cantonese as well.</p>
+<p>For Japanese, check out <a href="https://github.com/polm/fugashi">fugashi</a> or <a href="https://github.com/WorksApplications/SudachiPy">SudachiPy</a>, both for Python, though <a href="https://github.com/WorksApplications/Sudachi/">Sudachi</a>’s main implementation is in Java.</p>
+<p>(Japanese is harder to integrate segmentation with a dictionary: I have a rough project, <a href="https://github.com/fasiha/curtiz-japanese-nlp">Curtiz</a>, that helps find dictionary entries.)</p>
+<p>For parsing Korean, try <a href="https://konlpy.org">KoNLPy</a> and let me know.</p>
+</blockquote>
 <hr />
 <h2 id="korean-朝鮮語">Korean 朝鮮語</h2>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Hunminjeongum.jpg"></p>

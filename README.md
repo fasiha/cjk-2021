@@ -480,6 +480,14 @@ Some (Firefox, Notepad) just select runs of adjacent hiragana/katakana/Chinese c
 
 Others though ([VS Code](https://github.com/Microsoft/vscode/issues/50045)) just select the whole line 😢.
 
+> For those *interested* in parsing Chinese text: start with [chinese](https://pypi.org/project/chinese/) for Python, which combines segmentation and dictionary lookups. In my experience, the segmentation has been useful for Cantonese as well.
+>
+> For Japanese, check out [fugashi](https://github.com/polm/fugashi) or [SudachiPy](https://github.com/WorksApplications/SudachiPy), both for Python, though [Sudachi](https://github.com/WorksApplications/Sudachi/)’s main implementation is in Java.
+>
+> (Japanese is harder to integrate segmentation with a dictionary: I have a rough project, [Curtiz](https://github.com/fasiha/curtiz-japanese-nlp), that helps find dictionary entries.)
+>
+> For parsing Korean, try [KoNLPy](https://konlpy.org) and let me know.
+
 ---
 
 ## Korean 朝鮮語
