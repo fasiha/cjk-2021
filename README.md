@@ -304,7 +304,7 @@ You’re not limited by homophony: almost all characters have a unique represent
 
 Faster typing but it’s a skill that needs practice
 
-For example, to type <ruby>很<rt>hěn</rt></ruby><ruby>高兴<rt>gāoxìng</rt></ruby><ruby>见<rt>jiàn</rt></ruby><ruby>到<rt>dào</rt></ruby><ruby>你<rt>nǐ</rt></ruby> with Wubi:
+For example, to type <ruby>很<rt>hěn</rt></ruby><ruby>高兴<rt>gāoxìng</rt></ruby><ruby>见<rt>jiàn</rt></ruby><ruby>到<rt>dào</rt></ruby><ruby>你<rt>nǐ</rt></ruby> with Wubi, you enter *tve ym iw mqb gc wq*.
 
 ---
 
