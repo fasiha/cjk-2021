@@ -45,6 +45,8 @@ Let’s start with some technical foundations.
 
 ## ASCII
 
+Character set *and* character encoding
+
 ![asciitable.com](https://fasiha.github.io/cjk-2021/asciifull.gif)
 
 Notes:
@@ -57,7 +59,9 @@ Given that most CPUs you and I might program today have a byte (eight bits) as t
 
 ---
 
-## UTF-8
+## Unicode & UTF-8
+
+Unicode: character *set*, UTF-8: character *encoding*
 
 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Unicode range |
 |--------|--------|--------|--------|---------------|
