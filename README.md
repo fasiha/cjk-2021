@@ -733,6 +733,6 @@ It was converted to a normal [HTML page](https://fasiha.github.io/cjk-2021/) wit
 
 This Markdown works perfectly with [mark.show](https://mark.show) by [@motyar](https://twitter.com/motyar)! Here’s a direct link to view this document as a [slideshow on mark.show](https://mark.show/https://fasiha.github.io/cjk-2021/README.md)
 
-While I ordinarily release my creative content into the public domain (via Unlicense or CC0), I have chosen to release this under a [Creative Commons Attribution](https://creativecommons.org/licenses/by/4.0/) license. My friends with less privilege than me and who can’t yet release your work completely unencumbered—I see you. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+Text and my own photos/videos are relased under **[CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)**. (While I ordinarily release my creative content into the public domain (via Unlicense or CC0), I have chosen to release this under a [Creative Commons Attribution](https://creativecommons.org/licenses/by/4.0/) license. My friends with less privilege than me and who can’t yet release your work completely unencumbered—I see you.)
 
 [Get in touch](https://fasiha.github.io/#contact)
