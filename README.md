@@ -365,7 +365,7 @@ Notes:
 
 For more details, especially for the caveat about 见, see [Joe Wicentowski’s exposition](https://chinesemac.org/wubi/xing.html), specifically the Isolation Rule.
 
-This sequence of Wubi strokes was derived from this [Wubi86 layout](https://commons.wikimedia.org/wiki/File:Wubi86_keyboard_layout.png) and some [custom code](https://github.com/fasiha/cjk-2021/blob/gh-pages/wubi-analysis/script.py).
+This sequence of Wubi strokes was derived from this [Wubi86 layout](https://commons.wikimedia.org/wiki/File:Wubi86_keyboard_layout.png), the [wubi](https://github.com/arcsecw/wubi) Python package, and some [custom code](https://github.com/fasiha/cjk-2021/blob/gh-pages/wubi-analysis/script.py).
 
 ---
 
