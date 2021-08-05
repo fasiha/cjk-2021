@@ -51,7 +51,7 @@ Character set *and* character encoding
 
 Notes:
 
-ASCII is a mapping from all 128 seven-bit numbers (2**7 = 2<sup>7</sup> = 128) to characters, some printable, others invisible.
+ASCII is a mapping from the first 128 seven-bit numbers (0 to 127: 2**7 = 2<sup>7</sup> = 128) to characters. Most of these characters are printable, but some are invisible.
 
 Like *The Martian*, we should all have a copy of this table somewhere handy (I’ve referred to http://www.asciitable.com since school).
 
@@ -112,6 +112,8 @@ It’s well-known that “Chinese”, as any kind of unified spoken language, is
 > (This mirage may harden into reality as the winner-take-all dynamics of lingua francas, helped along by the People’s Republic of China’s active efforts, slowly kills some of these non-Mandarin languages)
 
 However! Speakers of these languages will use Chinese characters to *write*, so please let me keep the title of this section “Chinese writing”
+
+For a *delicious* deep dive into how, for example, Cantonese speakers write/tweet Cantonese, see [Zev Handel](https://twitter.com/ZevHandel/status/1414796995290570764)'s epic thread ([unrolled](https://threadreaderapp.com/thread/1414808566813270016.html)).
 
 ---
 
@@ -224,7 +226,7 @@ Although today spoken Mandarin only has around 450 syllables (many of which exis
 
 Notes:
 
-> Image: self: poster of all Japanese grade school kanji from [KanjiPoster.com](https://kanjiposter.com)
+> Image: self: poster of all 2136 Japanese grade school kanji from [KanjiPoster.com](https://kanjiposter.com)
 
 This leads to the classic data representation problem: literally thousands of characters for daily use—
 - ~2500 taught in elementary school and ~1000 taught in middle school in PRC ([Wikipedia](https://en.wikipedia.org/wiki/List_of_Commonly_Used_Characters_in_Modern_Chinese))
