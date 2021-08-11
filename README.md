@@ -72,7 +72,7 @@ Unicode: character *set*, UTF-8: character *encoding*
 
 Notes:
 
-Many (but not anywhere near all!) documents you’ll encounter today will be UTF-8 encoded. This means that the bytes in memory follow the above pattern and can be rapidly grouped into characters of one to four bytes (eight to thirty-bits):
+Many (but not anywhere near all!) documents you’ll encounter today will be UTF-8 encoded. This means that the bytes in memory follow the above pattern and can be rapidly grouped into characters of one to four bytes (eight to thirty-two bits):
 - if a byte starts with the 0 bit, we have a one-byte character—this is ASCII!
 - If a byte starts with 110, or 1110, or 11110, we have a two-, three-, or four-byte character.
 - If a byte starts with 10, we’re in the middle of a character: go left to find its start.
