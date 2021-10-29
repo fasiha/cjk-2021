@@ -719,6 +719,8 @@ Notes:
 
 > Image: screenshot of [@wongmjane](https://mobile.twitter.com/wongmjane/status/1391669787663601665): “McDonald’s Taiwan garbled their ads using incorrect text encoding (GBK being encoded as UTF-8) to promote their new sandwiches”.
 
+Big Tech isn’t immune either: here’s [Twitter messing up Han unification](https://mobile.twitter.com/wongmjane/status/1453234040857841668) in Tweet Composer, also via @wongmjane. It’s such a problem that Kenji Iguchi created a website called [Your Code Displays Japanese Wrong](https://heistak.github.io/your-code-displays-japanese-wrong/) that Japanese readers can send to developers when, figuratively, their “ҭєxҭ lѳѳκs κιnd ѳf lικє ҭЋιs”.
+
 ---
 
 We haven’t talked about ⥌[vertical scripts](https://netflixtechblog.com/implementing-japanese-subtitles-on-netflix-c165fbe61989)⥍, [fonts](https://monocle.com/radio/shows/monocle-on-design/extra-236/) 🆃, [emoji](https://www.youtube.com/watch?v=9BaLTBTqHmw) (^‿^), or [waffles](https://www.theverge.com/21327599/how-to-make-emoji-yawning-face-waffle-proposal-unicode) 🥞.
