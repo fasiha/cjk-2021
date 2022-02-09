@@ -330,7 +330,7 @@ This has been a major problem with React and other browser frameworks that want 
 
 Notes: 
 
-> Image: from Lunde, *CJKV Information Processing*, figure 2-2, showing the breakdown of 作 into radicals and strokes
+> Image: from Lunde, *CJKV Information Processing*, figure 2-2, showing the breakdown of 作 (つく.る) into radicals (亻 + 乍) and strokes
 
 If you’re familiar with *writing* a character (something increasingly rare after leaving school), you can specify its *component pieces* for rapid lookup of a character.
 
@@ -668,7 +668,7 @@ In fact, try copy-pasting these three simpler hangul and then removing the space
 
 Notes:
 
-> Image: regional differences in a single character per [Wikipedia](https://commons.wikimedia.org/wiki/File:Source_Han_Sans_Version_Difference.svg)
+> Image: regional differences in a single character, 返 (かえ.る), per [Wikipedia](https://commons.wikimedia.org/wiki/File:Source_Han_Sans_Version_Difference.svg)
 
 ---
 
