@@ -305,7 +305,7 @@ Easy for English speakers to learn!
 | X   | “sh 😊” (like Xinjiang)   |
 | Sh  | “sh ☹️” (like Shanghai)   |
 | Zh  | “j 😊” (like Guangzhou)   |
-| J   | “j ☹️”                    |
+| J   | “j ☹️” (like Xi Jinping)  |
 
 ---
 
