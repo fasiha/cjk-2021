@@ -342,7 +342,7 @@ Notes:
 
 > Image: a Wubi keyboard. [Source](https://commons.wikimedia.org/wiki/File:Wubi_keyboard-cut.png)
 
-There’s only so many of these components, and Each key on a QWERTY keyboard maps to a certain set of character components (often themselves characters).
+There’s only so many of these components, and each key on a QWERTY keyboard maps to a certain set of character components (often themselves characters).
 
 You type the components in the same order that you write them (stroke order being fixed, and heavily drilled in school)
 
@@ -407,7 +407,7 @@ But Japan was a cultural vassal of China for much of the last 1500 years, like a
 
 麒麟 = “qí lín” vs “ki rin” — “🦒”
 
-漢字 = “hàn zì” vs“kan ji” — “Chinese character”
+漢字 = “hàn zì” vs “kan ji” — “Chinese character”
 
 天使 = “tiān shǐ” vs “ten shi” — “👼”
 
