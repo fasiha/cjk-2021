@@ -63,12 +63,12 @@ Given that most CPUs you and I might program today have a byte (eight bits) as t
 
 Unicode: character *set*, UTF-8: character *encoding*
 
-| Byte 1 | Byte 2 | Byte 3 | Byte 4 | Unicode range |
-|--------|--------|--------|--------|---------------|
-| 0xxx xxxx |      |        |       | U+0 to U+7F (ASCII!) |
-| 110x xxxx | 10xx xxxx |  |        | U+80 to U+7FF |
-| 1110 xxxx | 10xx xxxx | 10xx xxxx |  | U+800 to U+FFFF |
-| 1111 0xxx | 10xx xxxx | 10xx xxxx | 10xx xxxx | U+10000 to U+10FFFF |
+| Byte 1    | Byte 2    | Byte 3    | Byte 4    | Unicode range        |
+| --------- | --------- | --------- | --------- | -------------------- |
+| 0xxx xxxx |           |           |           | U+0 to U+7F (ASCII!) |
+| 110x xxxx | 10xx xxxx |           |           | U+80 to U+7FF        |
+| 1110 xxxx | 10xx xxxx | 10xx xxxx |           | U+800 to U+FFFF      |
+| 1111 0xxx | 10xx xxxx | 10xx xxxx | 10xx xxxx | U+10000 to U+10FFFF  |
 
 Notes:
 
@@ -144,13 +144,13 @@ Notes:
 
 Imagine the sun 🌞
 
-| | |
-| ---------------- | -------------------------------------------------------------------------------------------------- |
-| 1500 BCE (bone) | <img src="https://fasiha.github.io/cjk-2021/日-oracle.svg" width="50em"> |
+|                  |                                                                          |
+| ---------------- | ------------------------------------------------------------------------ |
+| 1500 BCE (bone)  | <img src="https://fasiha.github.io/cjk-2021/日-oracle.svg" width="50em"> |
 | 800 BCE (bronze) | <img src="https://fasiha.github.io/cjk-2021/日-bronze.svg" width="50em"> |
-| 300 BCE (bamboo) | <img src="https://fasiha.github.io/cjk-2021/日-silk.svg" width="50em"> |
-| 200 BCE | <img src="https://fasiha.github.io/cjk-2021/日-seal.svg" width="50em"> |
-| Today | 日 |
+| 300 BCE (bamboo) | <img src="https://fasiha.github.io/cjk-2021/日-silk.svg" width="50em">   |
+| 200 BCE          | <img src="https://fasiha.github.io/cjk-2021/日-seal.svg" width="50em">   |
+| Today            | 日                                                                       |
 
 Notes:
 
