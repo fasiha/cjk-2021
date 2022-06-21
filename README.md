@@ -733,7 +733,7 @@ This document lives as a Markdown file on GitHub: [README.md](https://github.com
 
 It was converted to a normal [HTML page](https://fasiha.github.io/cjk-2021/) with [Pandoc](https://pandoc.org/). You can see the exact Pandoc command in the [build script](https://github.com/fasiha/cjk-2021/blob/gh-pages/build.sh). CSS derived from [Perfect Motherfucking Website](https://perfectmotherfuckingwebsite.com/)
 
-This Markdown works perfectly with [mark.show](https://mark.show) by [@motyar](https://twitter.com/motyar)! Here’s a direct link to view this document as a [slideshow on mark.show](https://mark.show/https://fasiha.github.io/cjk-2021/README.md)
+This Markdown works perfectly with [mark.show](https://motyar.github.io/markshow) by [@motyar](https://twitter.com/motyar)! Here’s a direct link to view this document as a [slideshow on mark.show](https://motyar.github.io/markshow/?source=https://fasiha.github.io/cjk-2021/README.md#/)
 
 Text and my own photos/videos are relased under **[CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)**. (While I ordinarily release my creative content into the public domain (via Unlicense or CC0), I have chosen to release this under a [Creative Commons Attribution](https://creativecommons.org/licenses/by/4.0/) license. My friends with less privilege than me and who can’t yet release your work completely unencumbered—I see you.)
 
